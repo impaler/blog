@@ -112,7 +112,7 @@ node debug-example.js
 
 You should now see a browser window like below with the dev tools stopped in a breakpoint:
 
-![Chrome dev tools](/assets/nightmare-dev-tools.png "Nightmare browser with chrome dev tools")
+![Chrome dev tools](/assets/nightmare/nightmare-dev-tools.png "Nightmare browser with chrome dev tools")
 
 See it's just like regular development in the Chrome browser and the [DevTools](https://developers.google.com/web/tools/chrome-devtools/?hl=en)!
 

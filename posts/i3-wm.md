@@ -74,11 +74,11 @@ sudo apt-get install arandr
 
 When first launching arandr you should see a familiar representation of your displays.
 
-![arandr](/assets/arandr.png)
+![arandr](/assets/i3-wm/arandr.png)
 
 You can drag and drop the arrangement of the screens, rotate and set their resolutions.
 
-![arandr-outputs](/assets/arandr-outputs.png)
+![arandr-outputs](/assets/i3-wm/arandr-outputs.png)
 
 `arandr` is an especially gui for xrandr given it can generate a bash script of what you configure. This bash script will contain regular `xrandr` commands.
 
@@ -114,6 +114,6 @@ mode $displayMode {
 
 This mode translates to the i3bar system similar to the standard resize mode:
 
-![i3-display-mode](/assets/i3-display-mode.png)
+![i3-display-mode](/assets/i3-wm/i3-display-mode.png)
 
 So with tools like arandr and the i3 mode configuration it's easy to have a usable solution quickly. Knowing how mode works also shows how it would be useful for other common actions you do on your system.
