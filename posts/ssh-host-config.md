@@ -62,7 +62,7 @@ Host github
     IdentityFile ~/.ssh/github
 ```
 
-The configuration is simple yml where you can specify configuration by `Host`. This Host key name is acts as the alias for your ssh commands and those used by git. For example to clone a gitlab project you can now use this:
+The configuration is simple yml where you can specify options by each ssh `Host` you are connecting to. This `Host` name acts as an alias for your ssh commands, git will also use these alias'. For example, to clone a gitlab project you can now use this:
 
 ```shell
 git clone gitlab:gitlab-org/gitlab-project.git
