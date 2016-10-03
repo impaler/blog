@@ -21,15 +21,15 @@ xrandr is configured through the command line and gives you control of your syst
 Screen 0: minimum 8 x 8, current 3440 x 1440, maximum 32767 x 32767
 eDP1 connected (normal left inverted right x axis y axis)
    3200x1800     59.98 +
-   2880x1620     60.00  
-   2560x1440     60.00  
-   2048x1536     60.00  
+   2880x1620     60.00
+   2560x1440     60.00
+   2048x1536     60.00
 ...
 DP1 connected 3440x1440+0+0 (normal left inverted right x axis y axis) 797mm x 333mm
-   3440x1440     59.97*+  49.99    29.99  
-   2560x1440     59.95  
-   2560x1080     60.00  
-   1920x1080     60.00    59.94  
+   3440x1440     59.97*+  49.99    29.99
+   2560x1440     59.95
+   2560x1080     60.00
+   1920x1080     60.00    59.94
 ...
 HDMI1 disconnected (normal left inverted right x axis y axis)
 VIRTUAL1 disconnected (normal left inverted right x axis y axis)
@@ -39,7 +39,7 @@ Once you know the display ids like eDP1, DP1 you can use the xrandr command to d
 
 ### Setup your systray
 
-On my first install of i3 the system tray was missing, i3 supports the system tray in i3bar nativley. Unfortunately some applications depend on it being there like silentcast. To show the system tray you can use the option `tray_output` in your `bar` configurations.
+On my first install of i3 the system tray was missing, i3 supports the system tray in i3bar natively. Unfortunately some applications depend on it being there like silentcast. To show the system tray you can use the option `tray_output` in your `bar` configurations.
 
 ```shell
 bar {
@@ -66,7 +66,7 @@ xrandr --output DP1 --primary
 
 On most distributions you should immediately see  it work with a wifi icon in the top right. To see what else you can do try `xrandr --help` or on the [arch wiki](https://wiki.archlinux.org/index.php/xrandr).
 
-Although you can manage your display arrangment and positioning with direct commands I think a visual representation of the displays helps a lot. There are a few guis that do exactly this, I'll now be showing off [arandr](https://christian.amsuess.com/tools/arandr/).
+Although you can manage your display arrangement and positioning with direct commands I think a visual representation of the displays helps a lot. There are a few guis that do exactly this, I'll now be showing off [arandr](https://christian.amsuess.com/tools/arandr/).
 
 ```shell
 sudo apt-get install arandr
@@ -88,7 +88,7 @@ To demonstrate this, just click the `Save As` button to generate the bash script
 
 An easy way to add configuration to your system in i3 is to use [binding modes](https://i3wm.org/docs/userguide.html#binding_modes). Its a basic way to implement a prompt like option for an action that allows key modifiers in a new context. Just like most configurations have $mod+r for resize...
 
-So for switching inbetween the xrandr configurations you generate becomes as easy as binding to a key:
+So for switching in-between the xrandr configurations you generate becomes as easy as binding to a key:
 
 ```bash
 set $displayMode "Set display mode [w]ork [l]aptop [h]ome"
