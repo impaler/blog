@@ -3,7 +3,7 @@ const TRAVIS_BRANCH = process.env['TRAVIS_BRANCH'] || 'unknown branch'
 const KEY_NAME = 'blog'
 const BUILD_FOLDER = 'dist'
 
-if (/dev|master|deploy-test/.test(TRAVIS_BRANCH)) {
+if (/dev|master|deploy/.test(TRAVIS_BRANCH)) {
     try {
         console.log(`Deploying site from branch ${TRAVIS_BRANCH}`)
 
@@ -24,4 +24,5 @@ if (/dev|master|deploy-test/.test(TRAVIS_BRANCH)) {
     }
 } else {
     console.log(`Not deploying ${TRAVIS_BRANCH} branch`)
+    process.exit(0)
 }
