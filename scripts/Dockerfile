@@ -7,6 +7,9 @@ RUN useradd -ms /bin/bash blogbuilder
 USER blogbuilder
 WORKDIR /home/blogbuilder
 
+RUN npm i npm -g
+RUN npm i yarn -g
+
 RUN git clone https://github.com/impaler/cd-blog-phenomic.git cd-blog-phenomic
 
 WORKDIR /home/blogbuilder/cd-blog-phenomic
