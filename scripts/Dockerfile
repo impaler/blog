@@ -1,19 +1,20 @@
-FROM nodesource/jessie:4.4.7
+FROM node:6.9.1
 
 RUN apt-get update
 RUN apt-get install git
 
-RUN useradd -ms /bin/bash blogbuilder
+RUN useradd --user-group --create-home --shell /bin/false blogbuilder &&\
+  npm install --global npm@4.0.3 &&\
+  npm install --global yarn@0.17.10
+
+
 USER blogbuilder
 WORKDIR /home/blogbuilder
-
-RUN npm i npm -g
-RUN npm i yarn -g
 
 RUN git clone https://github.com/impaler/cd-blog-phenomic.git cd-blog-phenomic
 
 WORKDIR /home/blogbuilder/cd-blog-phenomic
-RUN npm --production=false install
+RUN npm install
 
 EXPOSE 3000
 CMD "ip add | grep global"
