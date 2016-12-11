@@ -13,11 +13,9 @@ WORKDIR /home/blogbuilder
 RUN git clone https://github.com/impaler/cd-blog-phenomic.git cd-blog-phenomic
 
 WORKDIR /home/blogbuilder/cd-blog-phenomic
-RUN yarn install
 
-RUN whereis yarn
-RUN ls -lah
+RUN yarn install
 
 EXPOSE 3000
 CMD "ip add | grep global"
-ENTRYPOINT ["/usr/bin/yarn", "run"]
+ENTRYPOINT ["/usr/local/bin/yarn", "run"]
