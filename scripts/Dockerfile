@@ -17,4 +17,4 @@ RUN yarn install
 
 EXPOSE 3000
 CMD "ip add | grep global"
-ENTRYPOINT ["/usr/bin/npm", "run-script"]
+ENTRYPOINT ["/usr/bin/yarn", "run"]
