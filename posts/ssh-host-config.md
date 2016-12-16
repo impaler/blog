@@ -3,7 +3,7 @@ title: ssh `Host` configuration
 layout: Post
 tagline: Configure ssh for multiple hosts
 tags: git, ssh
---------------
+---
 
 If you have found yourself committing to multiple git remotes, connecting to multiple remote servers with ssh, you may find typing all the necessary arguments tedious. In this post I will show how you can use ssh configuration to make these tasks fair less painful. After this you will be able to do the following:
 
