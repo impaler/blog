@@ -12,7 +12,7 @@ USER node
 
 # Setup the phenomic static blog project
 WORKDIR /home/node
-RUN git clone https://github.com/impaler/cd-blog-phenomic.git cd-blog-phenomic -b develop
+RUN git clone https://github.com/impaler/cd-blog-phenomic.git cd-blog-phenomic
 WORKDIR /home/node/cd-blog-phenomic
 RUN git checkout develop
 
