@@ -410,19 +410,20 @@ S.add(2, true);
 ### Compile time type checking
 
 [Typescript][typescript] can be of huge benefit to a functional style for
-catching errors at compile time or in an ide.
+catching errors at compile time or in your ide. Typescript can't really help
+you with runtime errors.
 
-This can't help you while really debugging an error from the runtime.
-If you are starting to type functional code, it should be said that incorrectly
-typed code can lead to introducing errors that only show while in
-the runtime. So blindly trusting complex types can lead to a false
-sense of security.
+It should be said that incorrectly typed code, can lead to introducing errors
+that only show up in the runtime. For example, if you cast something as `any`
+this tells Typescript to ignore the type. Now if you were to pass something
+invalid through `any`, you will only see an error in the runtime. Keep in mind
+blindly trusting complex types or leaving functions parameters as `any` can
+lead to a false sense of security and runtime errors.
 
-In some scenarios, I have found that strictly typing everything
-religiously can be quite cumbersome with little return. For example,
-think about strictly typing a large [pipe][ramda-pipe] or
-[compose][ramda-compose] with [Generics][ts-generics] from the
-Ramda [@types/ramda][@types/ramda] definitions.
+In some scenarios, I have found that strictly typing everything religiously can
+be quite cumbersome with little return. For example, think about strictly typing
+a large [pipe][ramda-pipe] or [compose][ramda-compose] with [Generics][ts-generics]
+from the Ramda [@types/ramda][@types/ramda] definitions.
 
 For a reasonably large pipe, consider strict compliance with this interface:
 
