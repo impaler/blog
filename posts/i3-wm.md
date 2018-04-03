@@ -41,7 +41,7 @@ You can use this information with other commands. Once you know the display ids 
 
 Here we can tell a display from the previous list to display at a specific resolution and position.
 
-```bash
+```shell
 xrandr \
 --output eDP1 \
 --mode 3200x1800 \
@@ -51,7 +51,7 @@ xrandr \
 
 To turn a display off:
 
-```
+```shell
 xrandr --output DP1 --off
 ```
 
@@ -61,11 +61,11 @@ Although you can manage the arrangement and positioning of your displays with di
 sudo apt-get install arandr
 ```
 
-When first launching arandr you should see a familiar representation of your displays.
+When first launching arandr you should see a representation of your displays, similar to other window managers:
 
 ![arandr](/assets/i3-wm/arandr.png)
 
-You can drag and drop the arrangement of the screens, rotate and set their resolutions.
+You can now drag and drop the arrangement of the screens, rotate and set their resolutions:
 
 ![arandr-outputs](/assets/i3-wm/arandr-outputs.png)
 
