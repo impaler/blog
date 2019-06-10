@@ -1,6 +1,5 @@
 ---
 title: Debugging Functional Javascript
-layout: Post
 tagline: Working through errors and stacktraces to debug functional style javascript
 tags: fp, js, debugging
 ---
@@ -32,7 +31,7 @@ Lets start by looking at a stack trace from an unexpected error in some
 functional style code. It's probably just some silly typo, in this case it's
 from some something rather "simple" using the [Ramda][ramda] library:
 
-![Functional exception example](/assets/fp-debugging/example-fp-ramda-exception.png)
+![Functional exception example](./assets/example-fp-ramda-exception.png)
 
 When seeing this kind of thing, I can't help but be reminded of the
 frustration I have seen and experienced myself while writing and debugging
@@ -116,17 +115,17 @@ To illustrate, let's implement this using a couple of different styles.
 #### Functional point-free
 
 ```js
-const userDisplayText = R.pipe(
-  R.prop(['user']),
-  R.props(['name', 'species']),
-  R.intersperse('is a'),
-  R.join(' ')
+const userDisplayText = pipe(
+  prop(['user']),
+  props(['name', 'species']),
+  intersperse('is a'),
+  join(' ')
 )
 
-const messagesDisplayText = R.pipe(
-  R.prop('messages'),
-  R.map(userDisplayText),
-  R.join(', ')
+const messagesDisplayText = pipe(
+  prop('messages'),
+  map(userDisplayText),
+  join(', ')
 )
 ```
 
@@ -181,11 +180,11 @@ styles side by side:
 
 Functional:
 
-![Functional exception example](/assets/fp-debugging/example-fp-ramda-exception.png)
+![Functional exception example](./assets/example-fp-ramda-exception.png)
 
 Imperative:
 
-![Imperative exception example](/assets/fp-debugging/example-imperative-exception.png)
+![Imperative exception example](./assets/example-imperative-exception.png)
 
 In this particular scenario, it's almost like black and white. The imperative
 call stack shows you the exact function name and line number you need to
@@ -227,7 +226,7 @@ dependencies we are not currently concerned with.
 So using the example above, here is the "Pause on Uncaught Exceptions" of the
 functional example with all the Ramda lines blackboxed:
 
-![Black boxing Ramda](/assets/fp-debugging/example-blacklist-ramda-exception.png)
+![Black boxing Ramda](./assets/example-blacklist-ramda-exception.png)
 
 Yay in this case, after hiding 20 frames of Ramda, you can now see where I
 wrote code on `main.tsx:24`. This is exactly where I invoked the point-free method that leads to the exception.
@@ -279,17 +278,17 @@ function namedMessagesDisplayText(response) {
 Now inspecting the call stack, you should see the function name
 `namedMessagesDisplayText`:
 
-![Black boxing Ramda](/assets/fp-debugging/example-named-function-exception.png)
+![Black boxing Ramda](./assets/example-named-function-exception.png)
 
 With this in mind, you could avoid the redundant function by holding back on
 the purely `point-free` style and write this instead:
 
 ```js
 function messagesDisplayText (response) {
-  return R.pipe(
-    R.prop('messages'),
-    R.map(userDisplayText),
-    R.join(', ')
+  return pipe(
+    prop('messages'),
+    map(userDisplayText),
+    join(', ')
   )(response)
 }
 ```
@@ -308,12 +307,12 @@ const traceUser = (data) => {
   return data
 }
 
-const userLabelText = R.pipe(
-  R.prop(['user']),
+const userLabelText = pipe(
+  prop(['user']),
   traceUser, // <-- just another part of the pipe :)
-  R.props(['name', 'species']),
-  R.intersperse('is a'),
-  R.join(' ')
+  props(['name', 'species']),
+  intersperse('is a'),
+  join(' ')
 )
 ```
 
@@ -348,12 +347,12 @@ const debug = item => {
   return item
 }
 
-const userLabelText = R.pipe(
-  R.prop(['user']),
+const userLabelText = pipe(
+  prop(['user']),
   debug, // <-- put this wherever in the pipe you need to
-  R.props(['name', 'species']),
-  R.intersperse('is a'),
-  R.join(' ')
+  props(['name', 'species']),
+  intersperse('is a'),
+  join(' ')
 )
 ```
 

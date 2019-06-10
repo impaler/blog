@@ -1,6 +1,5 @@
 ---
 title: find, grep & ack
-layout: Post
 tagline: code search tooling in the command line
 tags: cli, search, dev
 ---
@@ -76,7 +75,7 @@ ack -f --js --noignore-dir=node_modules
 
 One other great part of using `ack` is the functional coloured output it displays for things like character matches and line numbers. It also offers the ability to tweak and theme what you see beyond the default output in it's options. Here is just an with the default stdout:
 
-![arandr](/assets/ack/ack-example.png)
+![arandr](./assets/ack-example.png)
 
 If you want to see how it can help problem solving, checkout this ascii-cinema for [using ack and regex to convert unstructured NASA GISS temperature data to CSV](https://asciinema.org/a/100135),
 

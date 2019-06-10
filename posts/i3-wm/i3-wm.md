@@ -1,7 +1,6 @@
 ---
 title: i3 display management
 date: 2016-08-02
-layout: Post
 tagline: Managing multiple displays with xrandr
 tags: linux, i3
 ---
@@ -63,11 +62,11 @@ sudo apt-get install arandr
 
 When first launching arandr you should see a representation of your displays, similar to other window managers:
 
-![arandr](/assets/i3-wm/arandr.png)
+![arandr](./assets/arandr.png)
 
 You can now drag and drop the arrangement of the screens, rotate and set their resolutions:
 
-![arandr-outputs](/assets/i3-wm/arandr-outputs.png)
+![arandr-outputs](./assets/arandr-outputs.png)
 
 `arandr` is an especially great gui for xrandr given that it can generate a bash script from the configuration you do. This bash script will contain regular `xrandr` commands for you to use whenever you need.
 
@@ -102,7 +101,7 @@ mode $displayMode {
 
 This mode when enabled acts like this:
 
-![i3-display-mode](/assets/i3-wm/i3-display-mode.png)
+![i3-display-mode](./assets/i3-display-mode.png)
 
 So with tools like arandr and the i3 mode configuration it's easy to have a usable solution quickly. Knowing about i3 [binding modes][i3-binding-modes], I am sure you can think of other use cases.
 

@@ -1,6 +1,5 @@
 ---
 title: React Portals
-layout: Post
 tagline: Control the dom structure of your React app with Portals
 tags: react, frontend
 ---
@@ -9,10 +8,10 @@ In React most apps are built by consuming component libraries in [jsx][jsx].
 This abstracts the dom and treats it's actual dom structure in the browser,
 as a [side-effect][side-effect].
 
-Entire React apps can be built without ever looking or thinking about the
-dom element structure. If you have done a fair bit of it, you may agree
-that it is more often true that the [React dev tools][react devtools] are
-more useful than the [dom-inspector][dom inspector] :/
+Entire React apps can be built without ever looking at, or thinking about the
+dom element structure. If you have done a fair bit of it, you may even admit
+that for react development, the [React Dev Tools][react-devtools] can be more 
+useful than the browsers' own [Dom Element Inspector tooling][dom-inspector] :/
 
 One pattern I noticed when first inspecting the dom of React apps,
 was a single root dom element. It seemed strange to structure your html markup
@@ -161,7 +160,7 @@ The resulting dom structure will be:
 Thanks to Portals you can now control the dom hierarchy and structure of
 your app :)
 
-[react devtools]: https://github.com/facebook/react-devtools "React Devtools github"
+[react-devtools]: https://github.com/facebook/react-devtools "React Devtools github"
 [jsx]: https://reactjs.org/docs/introducing-jsx.html
 [side-effect]: https://en.wikipedia.org/wiki/Side_effect_(computer_science)
 [mdn-intro-to-html]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure

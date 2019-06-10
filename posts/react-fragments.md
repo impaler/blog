@@ -1,6 +1,5 @@
 ---
 title: React Fragments
-layout: Post
 tagline: Avoiding a div soup with React Fragments
 tags: react, frontend
 ---

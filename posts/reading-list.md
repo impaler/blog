@@ -1,6 +1,5 @@
 ---
 title: Reading list
-layout: Post
 tagline: A collection of reading sources worth reading and sharing
 tags: reading, links
 ---

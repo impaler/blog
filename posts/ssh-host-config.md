@@ -1,6 +1,5 @@
 ---
 title: ssh `Host` configuration
-layout: Post
 tagline: Configure ssh for multiple hosts
 tags: git, ssh
 ---
